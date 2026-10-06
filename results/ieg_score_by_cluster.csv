@@ -1,0 +1,11 @@
+leiden,mean,median,size,cell_type
+0,2.72,2.76,138,Mural
+1,-0.39,-0.47,663,Astrocyte
+2,-0.42,-0.49,481,Astrocyte
+3,-0.37,-0.46,482,Astrocyte
+4,1.37,1.25,88,Astrocyte
+5,3.54,3.68,31,Endothelial
+6,0.19,-0.23,81,Astrocyte
+7,0.38,0.0,17,Neuron
+8,-0.48,-0.38,9,Oligodendrocyte
+9,4.01,4.26,11,Microglia/macrophage

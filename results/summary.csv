@@ -1,0 +1,13 @@
+,value
+cells_in_deposited_matrix,2031
+cells_after_qc,2001
+genes_after_filtering,19980
+leiden_clusters_all_cells,10
+cells_called_astrocyte,1795
+astrocyte_vs_other_agreement_with_published,0.9925
+astrocyte_subcluster_resolution,0.5
+astrocyte_subclusters,5
+ARI_subclusters_vs_published_AST,0.2581
+NMI_subclusters_vs_published_AST,0.3594
+ieg_high_cluster,9
+ieg_high_cluster_cells,11

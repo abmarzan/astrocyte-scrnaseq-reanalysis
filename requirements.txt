@@ -1,0 +1,15 @@
+# Versions used for the committed results (Python 3.13)
+scanpy==1.12.4
+anndata==0.13.4
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+leidenalg==0.12.0
+igraph==1.0.0
+umap-learn==0.5.12
+openpyxl==3.1.5
+jupytext==1.19.6
+nbconvert==7.17.1
+ipykernel==7.4.0

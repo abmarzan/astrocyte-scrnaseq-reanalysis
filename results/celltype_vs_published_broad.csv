@@ -1,0 +1,7 @@
+cell_type,(none),Astrocyte,Endothelial,Microglial,Mural,Neuronal,Oligodendrocytic
+Astrocyte,13,1782,0,0,0,0,0
+Endothelial,0,0,30,0,1,0,0
+Microglia/macrophage,0,0,0,11,0,0,0
+Mural,0,2,0,0,136,0,0
+Neuron,0,0,0,0,0,17,0
+Oligodendrocyte,0,0,0,0,0,0,9
