@@ -88,18 +88,26 @@ resting biology.
 
 ## Run it yourself
 
+**In the browser, nothing to install:** open the notebook in
+[Google Colab](https://colab.research.google.com/github/abmarzan/astrocyte-scrnaseq-reanalysis/blob/main/astrocyte_scrnaseq_scanpy.ipynb)
+and choose Runtime, Run all. The first cell installs the packages and downloads
+the data.
+
+**On your own computer** (Python 3.12 or newer for these package versions):
+
 ```bash
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python download_data.py                                  # about 12.5 MB from NCBI GEO
-python analysis.py                                       # writes figures/ and results/
+python analysis.py                                       # downloads the data, writes figures/ and results/
 # or, as a notebook:
 jupyter nbconvert --to notebook --execute --inplace astrocyte_scrnaseq_scanpy.ipynb
 ```
 
-Python 3.12 or newer is needed for these package versions. `analysis.py` and the
-notebook contain the same code. The run takes a few minutes on a laptop. The random seed is fixed, but UMAP coordinates and cluster
-numbers can still differ slightly between package versions.
+`analysis.py` and the notebook contain the same code; `download_data.py` fetches
+the two files separately and checks their checksums. The run takes a few minutes
+on a laptop. The random seed is fixed, but UMAP coordinates and cluster numbers
+can still differ slightly between package versions, so small differences from
+the committed numbers are expected.
 
 ## Files
 

@@ -15,11 +15,40 @@
 # genes, PCA, neighbour graph, UMAP, Leiden clustering, marker genes, cell-type
 # annotation, astrocyte sub-clustering, comparison with the published labels.
 
+# %% [markdown]
+# ## 0. Setup
+#
+# This cell makes the notebook self-contained: it installs the packages if they
+# are missing (for example in Google Colab) and downloads the two GEO files
+# (about 12.5 MB) into `data/` if they are not there yet.
+
+# %%
+import importlib.util
+import subprocess
+import sys
+import urllib.request
+from pathlib import Path
+
+if importlib.util.find_spec("scanpy") is None or importlib.util.find_spec("leidenalg") is None:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "scanpy", "leidenalg", "igraph", "openpyxl"])
+
+GEO = "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE114nnn/GSE114000/suppl/"
+GEO_FILES = [
+    "GSE114000_Counts_Batiuk_Martirosyan_Supplementary_Data3.tsv.gz",
+    "GSE114000_Metadata_Batiuk_Martirosyan_Supplementary_Data1.xlsx",
+]
+Path("data").mkdir(exist_ok=True)
+for name in GEO_FILES:
+    target = Path("data") / name
+    if not target.exists():
+        print("downloading", name)
+        urllib.request.urlretrieve(GEO + name, target)
+    print(f"{name}: {target.stat().st_size:,} bytes")
+
 # %%
 import warnings
 warnings.filterwarnings("ignore")
 
-from pathlib import Path
 import numpy as np
 import pandas as pd
 import scanpy as sc
